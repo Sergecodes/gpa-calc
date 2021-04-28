@@ -1,0 +1,1 @@
+{"ast":null,"code":"import randomColor from 'randomcolor';\nvar rc = randomColor();\nexport { rc };\nexport default function setColor(gpa) {\n  if (gpa >= 2.0) return 'primary';else return 'secondary';\n}","map":null,"metadata":{},"sourceType":"module"}
