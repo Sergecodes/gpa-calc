@@ -1,0 +1,29 @@
+{
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^2.0.4",
+    "axios": "^0.21.1",
+    "dom-to-image": "^2.6.0",
+    "file-saver": "^2.0.5",
+    "formik": "^2.2.6",
+    "formik-material-ui": "^3.0.1",
+    "i18next": "^20.1.0",
+    "i18next-browser-languagedetector": "^6.1.0",
+    "i18next-http-backend": "^1.2.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "nanoid": "^3.1.22",
+    "next": "^10.0.0",
+    "next-i18next": "^8.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-i18next": "^11.8.12",
+    "yup": "^0.32.9"
+  }
+}
