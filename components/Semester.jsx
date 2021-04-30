@@ -1,11 +1,11 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import Paper from '@material-ui/core/Paper';
-import Chip from '@material-ui/core/Chip';
+import {
+  Table, TableBody, TableCell,
+  TableContainer, TableHead, TableRow
+} from '@material-ui/core';
+import { Paper, TextField, Chip, Button } from '@material-ui/core';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
 import CourseInput from './CourseInput.jsx';
 import SemesterResult from './SemesterResult.jsx';
 

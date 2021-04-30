@@ -1,12 +1,10 @@
 import React from 'react';
-import Semester from '../components/Semester.jsx';
+import Semester from './Semester.jsx';
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Modal from '@material-ui/core/Modal';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
-import { withTranslation } from 'react-i18next';
-import domtoimage from 'dom-to-image';
 
 export function generateImage(semesterNum) {
   var img = new Image();

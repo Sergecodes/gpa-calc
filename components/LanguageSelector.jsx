@@ -1,6 +1,4 @@
-// import Typography from '@material-ui/core/Typography';
 import React from 'react';
-// import { useTranslation } from 'react-i18next';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -9,17 +7,12 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 
 export default function LanguageSelector(props) {
-    // const { t, i18n } = useTranslation();
     const { t, locale, router } = props;
-    // const [lang, setLang] = React.useState('en');
 
     const changeLanguage = (event) => {
       const locale = event.target.value;
       router.push('/', '/', { locale });
       props.handleLanguageChange(locale);
-      // setLang(event.target.value);
-      // i18n.changeLanguage(event.target.value);
-      // alert("Changed language");
     }
 
     return (
@@ -37,7 +30,6 @@ export default function LanguageSelector(props) {
           <RadioGroup
               aria-label="language"
               name="language"
-              // value={lang}
               defaultValue={locale}
               onChange={changeLanguage}
               style={{flexDirection: 'row'}}

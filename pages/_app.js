@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import { appWithTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import 'fontsource-roboto';
+import '@fontsource/roboto';
 import '../styles/global.css';
 
 // This default export is required in a new `pages/_app.js` file.
@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
 				<meta httpEquiv="content-type" content="text/html; charset=utf-8" />
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 				<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-				// <script src="jquery-3.5.0.js"></script>
 				<title>{locale === 'en' ? 'GPA Calculator' : 'Calculateur de MGP'}</title>
 			</Head>
 

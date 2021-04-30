@@ -1,11 +1,10 @@
 import Typography from '@material-ui/core/Typography';
-// import { useTranslation } from 'react-i18next';
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { TableRow, TableCell, TextField } from '@material-ui/core';
-// import t from './utils.js';
+
 
 export default class CourseInput extends React.Component {
     shouldComponentUpdate(nextProps, nextState) {

@@ -1,5 +1,5 @@
 import Semester from '../components/Semester.jsx';
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
 
 export default function SemesterList(props) {
     const {

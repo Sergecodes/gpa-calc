@@ -1,5 +1,5 @@
 {
-  "name": "learn-starter",
+  "name": "mgp-calculator-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,22 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^2.0.4",
-    "axios": "^0.21.1",
-    "dom-to-image": "^2.6.0",
-    "file-saver": "^2.0.5",
-    "formik": "^2.2.6",
-    "formik-material-ui": "^3.0.1",
-    "i18next": "^20.1.0",
-    "i18next-browser-languagedetector": "^6.1.0",
-    "i18next-http-backend": "^1.2.1",
-    "i18next-xhr-backend": "^3.2.2",
-    "nanoid": "^3.1.22",
+    "@fontsource/roboto": "^4.2.3",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.4",
+    "@react-pdf/renderer": "^2.0.8",
     "next": "^10.0.0",
     "next-i18next": "^8.2.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-i18next": "^11.8.12",
-    "yup": "^0.32.9"
-  }
+    "react-dom": "17.0.1"
+  },
+  "author": "Serge"
 }

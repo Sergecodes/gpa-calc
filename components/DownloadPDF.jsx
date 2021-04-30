@@ -7,7 +7,7 @@ import {
   View, Image, Document, StyleSheet,
   ReactPDF, PDFViewer
 } from '@react-pdf/renderer';
-import { generateImage } from '../components/DownloadImage.jsx';
+import { generateImage } from './DownloadImage.jsx';
 
 
 const styles = StyleSheet.create({

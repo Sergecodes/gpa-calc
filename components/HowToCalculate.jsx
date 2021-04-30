@@ -5,8 +5,6 @@ import HowToCalculate_Table from '../components/HowToCalculate_Table.jsx';
 
 export default function HowToCalculate(props) {
   const { t } = props;
-  // var firstP = createElement('span', {}, t('Explanation 1st P'));
-
 
   return (
     <>

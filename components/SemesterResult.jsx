@@ -2,7 +2,7 @@ import React from 'react';
 import Chip from '@material-ui/core/Chip';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import DownloadImage from './DownloadImage.jsx';  // previously ../component/DownloadImage.jsx
+import DownloadImage from './DownloadImage.jsx'; 
 import DownloadPDF from './DownloadPDF.jsx';
 import setColor from './utils';
 
