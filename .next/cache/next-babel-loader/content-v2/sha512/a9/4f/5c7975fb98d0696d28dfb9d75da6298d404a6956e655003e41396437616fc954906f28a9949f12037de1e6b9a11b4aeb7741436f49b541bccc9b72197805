@@ -1,1 +1,0 @@
-{"ast":null,"code":"import randomColor from 'randomcolor';\nvar rc = randomColor();\nexport default rc;","map":null,"metadata":{},"sourceType":"module"}
