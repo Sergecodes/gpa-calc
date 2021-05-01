@@ -8,6 +8,7 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import DeleteIcon from '@material-ui/icons/Delete';
 import CourseInput from './CourseInput.jsx';
 import SemesterResult from './SemesterResult.jsx';
+import setColor from './utils';
 
 
 export default function Semester(props) {
@@ -27,11 +28,6 @@ export default function Semester(props) {
     } = props;
     const gpa = semester.gpa, numCourses = semester.courses.length;
 
-    const setColor = gpa => {
-      if (gpa >= 2.0) return 'primary';
-      else return 'secondary';
-    }
-
     return (
       <>
         <div id={`semester-${semester.number}`} style={{marginBottom: '2rem'}}>
@@ -49,7 +45,7 @@ export default function Semester(props) {
               <TableHead>
                 <TableRow style={{borderBottom: '1px solid rgb(224, 224, 224)'}}>
                   <TableCell style={headerCellStyle}>{t('Course name')}</TableCell>
-                  <TableCell style={headerCellStyle}>{t('Credit')}</TableCell>
+                  <TableCell style={headerCellStyle}>{t('Credit') + ' (max 10)'}</TableCell>
                   <TableCell size="small" style={headerCellStyle}>{t('Marks /100')}</TableCell>
                   <TableCell size="small" style={headerCellStyle}>{t('Grade')}</TableCell>
                 </TableRow>

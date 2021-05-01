@@ -2,7 +2,7 @@ import React from 'react';
 import Chip from '@material-ui/core/Chip';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import DownloadImage from './DownloadImage.jsx'; 
+import DownloadImage from './DownloadImage.jsx';
 import DownloadPDF from './DownloadPDF.jsx';
 import setColor from './utils';
 
@@ -23,7 +23,6 @@ export default function SemesterResult(props) {
           color={setColor(gpa)}
           variant="outlined"
           label={gpa === 0 ? 'GPA: 0.00 / 4' : `GPA: ${gpa} / 4`}
-          // label={`GPA: ${props.gpa}/4`}
           style={{
             fontWeight: '900',
             fontSize: '1.1rem',

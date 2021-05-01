@@ -16,17 +16,29 @@ export default class CourseInput extends React.Component {
       if (this.props.semester.courses.length === 1 || this.props.semester.courses.length === 2)
         return true;
 
+      // these 2 vals will always be same
+      // console.log(this.props.course.forceReRender, nextProps.course.forceReRender)
+
+      // this test is done before the next test (props.course test) because when the reset button is pressed,
+      // this is the only way we can know - since the courses will be reseted but not rendered as this.props.course
+      // will be equal to nextProps.course = initial values (0, 0.0, '', etc)
+      // ps: forceReRender is used for resetting the courses when semester is reset
+      if(nextProps.course.forceReRender === true)
+        return true;
+
       // if the course wasn't modified then don't re-render
-      if (JSON.stringify(this.props.course) === JSON.stringify(nextProps.course)
-        // && JSON.stringify(this.props.semester) === JSON.stringify(nextProps.semester)
-      )
+      if (JSON.stringify(this.props.course) === JSON.stringify(nextProps.course))
         return false;
 
       return true;
     }
 
+
     render() {
+      this.props.course.forceReRender = false;
+      // console.log(this.props.course);
       // console.log(`Course ${this.props.course.id} in semester ${this.props.semester.number} rendered`);
+
       const {
         course, semester, onInputChange,
         onMarkOrCreditChange, onDeleteCourse
@@ -41,7 +53,7 @@ export default class CourseInput extends React.Component {
                   // id={`course-${course.id}-name`}
                   name="name"
                   value={name}
-                  placeholder="e.g. Math 1032"
+                  placeholder="e.g. INF 2054"
                   size="small"
                   variant="outlined"
                   onChange={() => onInputChange(event, course, semester)}

@@ -19,6 +19,7 @@ const INITIAL_COURSES = [
     markOver100: 0.0,
     points: 0.0,  // example: 3.7, 4.0 ..
     grade: '',  // such as A, B..
+    forceReRender: false,  // used to force a course to rerender in browser when necessary
   }, {
     id: 2,
     name: '',
@@ -26,6 +27,7 @@ const INITIAL_COURSES = [
     markOver100: 0.0,
     points: 0.0,
     grade: '',
+    forceReRender: false,
   }, {
     id: 3,
     name: '',
@@ -33,6 +35,7 @@ const INITIAL_COURSES = [
     markOver100: 0.0,
     points: 0.0,
     grade: '',
+    forceReRender: false,
   }
 ];
 const INITIAL_SEMESTER = {
@@ -45,7 +48,6 @@ const INITIAL_SEMESTER = {
 class GPACalculator extends Component {
   constructor(props) {
     super(props);
-    console.log("Semesters list rendered");
 
     this.state = {
       semesters: [JSON.parse(JSON.stringify(INITIAL_SEMESTER))]
@@ -59,7 +61,7 @@ class GPACalculator extends Component {
   }
 
   componentDidMount() {
-    console.log(this.locale);
+    // console.log(this.locale);
     this.router.push('/', '/', { locale: this.locale });
   }
 
@@ -297,11 +299,19 @@ class GPACalculator extends Component {
     this.setState({ semesters });
   }
 
+
   handleResetSemester = semester => {
     var semesters = JSON.parse(JSON.stringify(this.state.semesters));
 
+    // forceReRender to true to force re-rendering of all courses
+    // without it, the semester will rerender and the course properties will be initialised but the courses
+    // won't be re-rendered.
     semester.courses = semester.courses.map(course => {
-      [course.name, course.credit, course.markOver100, course.points, course.grade] = ['', 0, 0.0, 0.0, ''];
+      [
+        course.name, course.credit, 
+        course.markOver100, course.points, 
+        course.grade, course.forceReRender  // forceReRender to true to force re-rendering of all courses
+      ] = ['', 0, 0.0, 0.0, '', true];
       return course;
     });
     semester.gpa = 0.0;
@@ -311,7 +321,6 @@ class GPACalculator extends Component {
   }
 
   handleAddCourse = semester => {
-    // var semesters = [...this.state.semesters];
     var semesters = JSON.parse(JSON.stringify(this.state.semesters));
     const numCourses = semester.courses.length;
 
@@ -322,6 +331,7 @@ class GPACalculator extends Component {
       credit: 0,
       markOver100: 0.0,
       grade: '',
+      forceReRender: false,
     });
     semesters[semester.number - 1] = semester;
 
@@ -331,7 +341,6 @@ class GPACalculator extends Component {
   handleDeleteCourse = (course, semester) => {
     var semesters = JSON.parse(JSON.stringify(this.state.semesters));
     const courseIndex = course.id - 1;
-    // var semesterCourses = semester.courses;
 
     // Remove course from list of semester's courses
     semester.courses = semester.courses.filter(semCourse => semCourse.id !== course.id);
@@ -347,8 +356,6 @@ class GPACalculator extends Component {
   }
 
   render() {
-    // if(this.router !== null && this.router !== undefined)
-    //   this.router.push('/', '/', { locale: this.locale });
     const { semesters } = this.state;
     const numSemesters = semesters.length;
     const gpas = semesters.map(semester => semester.gpa);
