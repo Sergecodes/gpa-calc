@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }) {
 				<meta httpEquiv="content-type" content="text/html; charset=utf-8" />
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 				<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+                                <script data-ad-client="ca-pub-2948954835693239" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<title>{locale === 'en' ? 'GPA Calculator' : 'Calculateur de MGP'}</title>
 			</Head>
 
