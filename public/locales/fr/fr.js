@@ -21,6 +21,7 @@ const translationStrings = {
   "Grade": "Côte",
   "Score and appreciation grid": "Grille de notation et d'appréciation",
   "80 and above": "80 et plus",
+  "Very good": "Très bien",
   "Good": "Bien",
   "Good enough": "Assez bien",
   "Satisfactory": "Passable",

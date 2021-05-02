@@ -21,6 +21,7 @@ const translationStrings = {
     "Grade": "Grade",
     "Score and appreciation grid": "Score and appreciation grid",
     "80 and above": "80 and above",
+    "Very good": "Very good",
     "Good": "Good",
     "Good enough": "Good enough",
     "Satisfactory": "Satisfactory",

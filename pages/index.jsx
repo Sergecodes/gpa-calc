@@ -331,6 +331,7 @@ class GPACalculator extends Component {
       credit: 0,
       markOver100: 0.0,
       grade: '',
+      points: 0.0,
       forceReRender: false,
     });
     semesters[semester.number - 1] = semester;

@@ -18,7 +18,7 @@ export function generateImage(semesterNum) {
     })
     .catch(function (error) {
       alert("An error occurred during the generation of the image.");
-      console.error('oopss', error);
+      // console.error('oopss', error);
     });
 
   return img;
@@ -41,7 +41,7 @@ export default class DownloadImage extends React.Component {
     const $this = this;  // preserve the *this* object.
 
     this.image.onload = function () {
-      // *this* here will be undefined ?(arrow function) so use $this
+      // *this* here will be the object that defined the arrow function so use $this instead
       // console.log($this.image);
       $this.setState({
         open: true
