@@ -174,6 +174,7 @@ export default function Semester(props) {
                     style={{
                       fontWeight: '900',
                       fontSize: '1.1rem',
+                      whiteSpace: 'nowrap'
                     }}
                   />
                   </TableCell>

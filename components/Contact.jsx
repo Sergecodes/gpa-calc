@@ -44,7 +44,7 @@ export default function Contact(props) {
               />
             </a>
             <a className="link-text gmail-text" href="mailto: polosergeo31@gmail.com">
-              {t('Email me')}
+              {t('Email')}
             </a>
           </Grid>
 
@@ -53,7 +53,7 @@ export default function Contact(props) {
               <WhatsApp fontSize="large" />
             </a>
             <a className="link-text whatsapp-text" href="https://wa.me/237651209832">
-              {t('WhatsApp me')}
+              {t('WhatsApp')}
             </a>
           </Grid>
       </Grid>

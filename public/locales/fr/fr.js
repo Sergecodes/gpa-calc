@@ -34,8 +34,8 @@ const translationStrings = {
   "Appreciation": "Appréciation",
   "How to Calculate GPA": "Comment calculer la MGP",
   "Example": "Exemple",
-  "WhatsApp me": "WhatsApp",
-  "Email me": "Émail",
+  "WhatsApp": "WhatsApp",
+  "Email": "Émail",
   "Contact via email": "Contactez par émail",
 
   "sp1": "Chaque UE a un crédit, qui est comme son coefficient et détermine son 'poids.' Les points de chaque UE sont obtenus en utilisant la table ci-dessus, et ces points dépendent le la note obtenu dans cette UE. ",

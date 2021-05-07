@@ -34,8 +34,8 @@ const translationStrings = {
     "Appreciation": "Appreciation",
     "How to Calculate GPA": "How to Calculate GPA",
     "Example": "Example",
-    "WhatsApp me": "WhatsApp me",
-    "Email me": "Email me",
+    "WhatsApp": "WhatsApp",
+    "Email": "Email",
     "Contact via email": "Contact via email",
 
     "sp1": "Each course has a credit, which is like its coefficient and determines its 'weight'. The 'points' obtained for each course is obtained as shown on the table above, and depends on the marks obtained. ",

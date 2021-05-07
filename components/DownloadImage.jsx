@@ -102,7 +102,7 @@ export default class DownloadImage extends React.Component {
                 />
                 <a
                   href={image.src}
-                  download={`Semester {this.semesterNum} results.png`}
+                  download={`Semester ${this.semesterNum} results.png`}
                   style={{
                     alignSelf: 'end',
                     position: 'relative',
