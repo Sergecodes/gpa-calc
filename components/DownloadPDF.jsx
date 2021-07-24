@@ -111,8 +111,11 @@ export default class DownloadPDF extends React.Component {
                 {
                   // todo: for now, this just display an image. change this to actually display the pdf.
                 }
-                <object style={{width: '70%', marginTop: '2rem', marginBottom: '3rem'}} data={this.image.src} type="application/pdf">
-                </object>
+                <img
+                  src={this.image.src}
+                  alt={this.image.alt}
+                  style={{width: '70%', marginTop: '2rem', marginBottom: '3rem'}}
+                />
 
                 <Button
                   color="secondary"
