@@ -26,6 +26,7 @@ export default function SemesterResult(props) {
           style={{
             fontWeight: '900',
             fontSize: '1.1rem',
+            textOverflow: 'clip'
           }}
         />
       </TableCell>

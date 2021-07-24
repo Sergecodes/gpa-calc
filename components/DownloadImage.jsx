@@ -81,7 +81,7 @@ export default class DownloadImage extends React.Component {
           aria-label={`Semester ${this.semesterNum} results modal image`}
           style={{
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'space-evenly',
             flexDirection: 'row-reverse',
             height: '90%'
           }}
@@ -91,7 +91,7 @@ export default class DownloadImage extends React.Component {
               aria-label="Close modal"
               onClick={() => this.handleClose()}
               component="span"
-              style={{alignSelf: 'start', color: 'ghostwhite', marginLeft: '3rem'}}
+              style={{alignSelf: 'start', color: 'ghostwhite'}}
             >
               <CloseIcon />
             </IconButton>
@@ -101,7 +101,7 @@ export default class DownloadImage extends React.Component {
                   src={image.src}
                   alt={image.alt}
                   id={image.id}
-                  style={{width: '70%', marginLeft: '2rem'}}
+                  style={{width: '70%', marginTop: '2rem', marginBottom: '3rem'}}
                 />
                 <a
                   href={image.src}

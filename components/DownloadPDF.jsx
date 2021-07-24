@@ -84,7 +84,7 @@ export default class DownloadPDF extends React.Component {
           aria-label={`Semester ${this.semesterNum} results pdf modal`}
           style={{
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'space-evenly',
             flexDirection: 'row-reverse'
           }}
         >
@@ -93,7 +93,7 @@ export default class DownloadPDF extends React.Component {
               aria-label="Close modal"
               onClick={() => this.handleClose()}
               component="span"
-              style={{alignSelf: 'start', color: 'ghostwhite', marginLeft: '3rem'}}
+              style={{alignSelf: 'start', color: 'ghostwhite'}}
             >
               <CloseIcon />
             </IconButton>
@@ -105,11 +105,13 @@ export default class DownloadPDF extends React.Component {
                   <PDFViewer style={{width: '70%', marginTop: '2rem', marginBottom: '3rem', marginLeft: '3rem'}}>
                     {<this.MyDoc/>}
                   </PDFViewer>
-                  */
+                </object>
+                */
                 }
-                <object style={{width: '75%', marginTop: '2rem', marginBottom: '3rem', marginLeft: '2rem'}} data={this.image.src} type="application/pdf">
-                  <iframe src={`https://docs.google.com/viewer?url=${this.image.src}&embedded=true`}>
-                  </iframe>
+                {
+                  // todo: for now, this just display an image. change this to actually display the pdf.
+                }
+                <object style={{width: '70%', marginTop: '2rem', marginBottom: '3rem'}} data={this.image.src} type="application/pdf">
                 </object>
 
                 <Button
