@@ -14,7 +14,7 @@ const translationStrings = {
   "Course name": "Nom de l'UE",
   "Cumulative": "Cumulative",
   "Icon 1 content": "La moyenne est calculée en divisant la somme de toutes les MGPs par le nombre de semestres.",
-  "Icon 2 content": "Elle est calculée en considérant toutes les UEs de chaque semestre comme si elles étaient dans un semestre puis calculant la MGP.",
+  "Icon 2 content": "Elle est calculée en considérant toutes les UEs de chaque semestre comme étant dans un semestre puis calculant la MGP.",
   "Average": "Moyenne",
   "Credit": "Crédit",
   "Marks /100": "Notes /100",
@@ -34,7 +34,7 @@ const translationStrings = {
   "Appreciation": "Appréciation",
   "How to Calculate GPA": "Comment calculer la MGP",
   "Example": "Exemple",
-  "WhatsApp": "WhatsApp",
+  "GitHub": "GitHub",
   "Email": "Émail",
   "Contact via email": "Contactez par émail",
 

@@ -14,7 +14,7 @@ const translationStrings = {
     "Average": "Average",
     "Cumulative": "Cumulative",
     "Icon 1 content": "The average is calculated by dividing the sum of all GPAs by the number of semesters.",
-    "Icon 2 content": "It is calculated by considering all the courses of every semester as if they are in one semester and calculating the GPA altogether.",
+    "Icon 2 content": "It is calculated by considering all the courses of every semester like they were in one semester and calculating the GPA altogether.",
     "Course name": "Course name",
     "Credit": "Credit",
     "Marks /100": "Marks /100",
@@ -34,7 +34,7 @@ const translationStrings = {
     "Appreciation": "Appreciation",
     "How to Calculate GPA": "How to Calculate GPA",
     "Example": "Example",
-    "WhatsApp": "WhatsApp",
+    "GitHub": "GitHub",
     "Email": "Email",
     "Contact via email": "Contact via email",
 

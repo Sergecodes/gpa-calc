@@ -29,16 +29,19 @@ export default class DownloadPDF extends React.Component {
     };
   }
 
-  MyDoc = () => (
-    <Document>
-      <Page size="A4" style={{...styles.page, textAlign: 'center'}}>
-        <Image
-          src={this.image.src}
-          style={{width: '100%'}}
-        />
-      </Page>
-    </Document>
-  );
+  MyDoc = () => {
+    // console.log(this.image.src);
+    return (
+      <Document>
+        <Page size="A4" style={{...styles.page, textAlign: 'center'}}>
+          <Image
+            src={this.image.src}
+            style={{width: '100%'}}
+          />
+        </Page>
+      </Document>
+    );
+  }
 
   handleClose = () => {
     var node = document.getElementById(`semester-${this.semesterNum} clone`);
@@ -51,13 +54,12 @@ export default class DownloadPDF extends React.Component {
 
   handleOpen = () => {
     this.image = generateImage(this.semesterNum);
-
-    const $this = this;  // preserve the *this* object.
+    const that = this;  // preserve the *this* object.
 
     this.image.onload = function () {
-      // *this* here will be undefined ?(arrow function) so use $this
-      // console.log($this.image);
-      $this.setState({
+      // *this* here will be undefined ?(arrow function) so use that
+      // console.log(that.image);
+      that.setState({
         open: true
       });
     };
@@ -97,22 +99,27 @@ export default class DownloadPDF extends React.Component {
             </IconButton>
             {this.image !== null ?
               <>
-                <PDFViewer style={{width: '70%', marginTop: '2rem', marginBottom: '3rem', marginLeft: '3rem'}}>
-                  {this.MyDoc()}
-                </PDFViewer>
+                {// PDFViewer turns to an iframe.
+                }
+                {/*
+                  <PDFViewer style={{width: '70%', marginTop: '2rem', marginBottom: '3rem', marginLeft: '3rem'}}>
+                    {<this.MyDoc/>}
+                  </PDFViewer>
+                  */
+                }
+                <object style={{width: '75%', marginTop: '2rem', marginBottom: '3rem', marginLeft: '2rem'}} data={this.image.src} type="application/pdf">
+                  <iframe src={`https://docs.google.com/viewer?url=${this.image.src}&embedded=true`}>
+                  </iframe>
+                </object>
+
                 <Button
                   color="secondary"
                   variant="contained"
                   onClick={() => this.handleClose()}
-                  style={{
-                    alignSelf: 'end',
-                    position: 'relative',
-                    bottom: '2rem',
-                    left: '2rem'
-                  }}
+                  style={{alignSelf: 'center'}}
                 >
                   <PDFDownloadLink
-                    document={this.MyDoc()}
+                    document={<this.MyDoc/>}
                     fileName={`Semester ${this.semesterNum} results.pdf`}
                     style={{textDecoration: 'none', color: 'midnightblue'}}
                   >

@@ -133,7 +133,7 @@ export default function Semester(props) {
           </TableContainer>
         </div>
 
-        <div id={`semester-${semester.number} clone`} style={{display: 'none', width: '80%'}}>
+        <div id={`semester-${semester.number} clone`} style={{display: 'none'}}>
           <div style={{
             fontVariant: 'small-caps',
             color: 'rgba(249, 71, 47, .9)',

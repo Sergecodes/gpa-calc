@@ -7,6 +7,8 @@ import domtoimage from 'dom-to-image';
 
 export function generateImage(semesterNum) {
   var img = new Image();
+  // an element must be visible(display not 'none') for there to be possibility of image generation
+  // so we first make our "to-be-generated-image's element" visible
   var node = document.getElementById(`semester-${semesterNum} clone`);
   node.style.display = "block";
 
@@ -38,12 +40,12 @@ export default class DownloadImage extends React.Component {
   handleOpen = () => {
     this.image = generateImage(this.semesterNum);
 
-    const $this = this;  // preserve the *this* object.
+    const that = this;  // preserve the *this* object.
 
     this.image.onload = function () {
-      // *this* here will be the object that defined the arrow function so use $this instead
-      // console.log($this.image);
-      $this.setState({
+      // *this* here will be the object that defined the arrow function so use that instead
+      // console.log(that.image);
+      that.setState({
         open: true
       });
     };
@@ -51,6 +53,7 @@ export default class DownloadImage extends React.Component {
   }
 
   handleClose = () => {
+    // hide the semester clone used to generate the image
     var node = document.getElementById(`semester-${this.semesterNum} clone`);
     node.style.display = "none";
 
@@ -98,17 +101,12 @@ export default class DownloadImage extends React.Component {
                   src={image.src}
                   alt={image.alt}
                   id={image.id}
-                  style={{width: '60%'}}
+                  style={{width: '70%', marginLeft: '2rem'}}
                 />
                 <a
                   href={image.src}
                   download={`Semester ${this.semesterNum} results.png`}
-                  style={{
-                    alignSelf: 'end',
-                    position: 'relative',
-                    bottom: '1rem',
-                    right: '2rem'
-                  }}
+                  style={{alignSelf: 'center'}}
                 >
                   <Button
                     color="secondary"

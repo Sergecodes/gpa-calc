@@ -1,11 +1,14 @@
 import Image from 'next/image';
-import { WhatsApp } from '@material-ui/icons';
+import { WhatsApp, GitHub } from '@material-ui/icons';
+// import GitHubIcon from '@material-ui/icons/GitHub';
 import { Grid, Typography } from '@material-ui/core';
 
 export default function Contact(props) {
   const { t } = props;
   const gridItemStyles = {
-    textAlign: 'center'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   };
 
   return (
@@ -24,7 +27,7 @@ export default function Contact(props) {
           fontSize: '2.2rem',
 
       }}>
-          Contact
+          <span style={{borderBottom: '1px dotted'}}>Contact</span>
       </Typography>
       <Grid
         container
@@ -47,15 +50,27 @@ export default function Contact(props) {
               {t('Email')}
             </a>
           </Grid>
-
           <Grid item xs={2} style={gridItemStyles}>
-            <a href="https://wa.me/237651209832" className="whatsapp-ico">
-              <WhatsApp fontSize="large" />
+            <a href="https://github.com/Sergecodes/gpa-calc" className="github-ico">
+              <GitHub fontSize="large" />
             </a>
-            <a className="link-text whatsapp-text" href="https://wa.me/237651209832">
-              {t('WhatsApp')}
+            <a className="link-text github-text" href="https://github.com/Sergecodes/gpa-calc">
+              {t('GitHub')}
             </a>
           </Grid>
+          {
+            /*
+            <Grid item xs={2} style={gridItemStyles}>
+              <a href="https://wa.me/237651209832" className="whatsapp-ico">
+                <WhatsApp fontSize="large" />
+              </a>
+              <a className="link-text whatsapp-text" href="https://wa.me/237651209832">
+                {t('WhatsApp')}
+              </a>
+            </Grid>
+            */
+          }
+
       </Grid>
 
       <style jsx>{`
@@ -63,15 +78,25 @@ export default function Contact(props) {
           text-align: center;
         }
 
+        /*
         .whatsapp-ico,
         .whatsapp-text {
           color: #22ee22;
         }
+        */
 
         .link-text {
-          font-size: 15px;
+          font-size: .9rem;
           display: block;
           text-decoration: none;
+        }
+
+        .github-ico {
+          margin-bottom: 3px;
+        }
+
+        .github-text {
+          color: #551a8b;
         }
 
         .gmail-text {

@@ -39,6 +39,7 @@ const INITIAL_COURSES = [
   }
 ];
 const INITIAL_SEMESTER = {
+  // copying an array of objects hence the JSON.parse and JSON.stringify functions are used
   courses: JSON.parse(JSON.stringify(INITIAL_COURSES)),
   gpa: 0.0,
   number: 1,
@@ -308,8 +309,8 @@ class GPACalculator extends Component {
     // won't be re-rendered.
     semester.courses = semester.courses.map(course => {
       [
-        course.name, course.credit, 
-        course.markOver100, course.points, 
+        course.name, course.credit,
+        course.markOver100, course.points,
         course.grade, course.forceReRender  // forceReRender to true to force re-rendering of all courses
       ] = ['', 0, 0.0, 0.0, '', true];
       return course;
@@ -371,7 +372,7 @@ class GPACalculator extends Component {
           router={this.router}
           handleLanguageChange={this.handleLanguageChange}
         />
-        <br /> <br /> <br/>
+        <br /> <br /> <br/> <br />
     		<Heading t={t} />
     		<main>
         	 <SemesterList
