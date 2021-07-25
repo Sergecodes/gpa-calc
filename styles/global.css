@@ -31,7 +31,7 @@ img {
 }
 
 .MuiChip-label {
-    text-overflow: clip;  
+    text-overflow: clip !important;  
 }
 
 .sr-only {
@@ -49,6 +49,7 @@ img {
   body {
     padding: 0;
     padding-left: .3rem;
+    padding-right: .2rem;
   }
     
   .github-ico {
