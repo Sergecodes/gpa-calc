@@ -30,6 +30,10 @@ img {
     display: block;
 }
 
+.MuiChip-label {
+    text-overflow: clip;  
+}
+
 .sr-only {
     position: absolute;
     left: -10000px;
@@ -43,6 +47,11 @@ img {
 @media (max-width: 991.98px) {
   html,
   body {
-    padding: 0 0;
+    padding: 0;
+    padding-left: .3rem;
+  }
+    
+  .github-ico {
+      margin-bottom: 0;
   }
 }
