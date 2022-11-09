@@ -46,7 +46,7 @@ export default function Contact(props) {
                 height={40}
               />
             </a>
-            <a className="link-text gmail-text" href="mailto: polosergeo31@gmail.com">
+            <a className="link-text gmail-text" href="mailto:sergedurand205@gmail.com">
               {t('Email')}
             </a>
           </Grid>
@@ -58,19 +58,6 @@ export default function Contact(props) {
               {t('GitHub')}
             </a>
           </Grid>
-          {
-            /*
-            <Grid item xs={2} style={gridItemStyles}>
-              <a href="https://wa.me/237651209832" className="whatsapp-ico">
-                <WhatsApp fontSize="large" />
-              </a>
-              <a className="link-text whatsapp-text" href="https://wa.me/237651209832">
-                {t('WhatsApp')}
-              </a>
-            </Grid>
-            */
-          }
-
       </Grid>
 
       <style jsx>{`
